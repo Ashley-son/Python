@@ -1,5 +1,5 @@
-import random
-from abc import ABC, abstractmethod
+import random # random 라이브러리 호출 
+from abc import ABC, abstractmethod # 추상 method 호출 
 
 # balance = 잔액
 # holder_name = 소유주명
@@ -11,14 +11,14 @@ class BankAccount(ABC): # 예금 계좌 클래스 생성
         self._holder_name = holder_name
         self.__balance = balance
 
-    def get_account_number(self):
-        return self._account_number
+    def get_account_number(self): # Getter 메서드 생성  
+        return self._account_number # return 값을 통한 결과값 전달 
 
     def get_balance (self) : # get 메소드 선언 필요 
         return self.__balance
 
     def deposit(self, amount):
-        self.__balance += amount
+        self.__balance += amount # 캡술화 구현 
 
     def withdraw(self, amount):
         if amount > self.__balance:
